@@ -1,6 +1,6 @@
 import Header from "@/components/Header"
 
-export default function Events() {
+export default function Blog() {
 	return (
 		<>
 			<Header />
