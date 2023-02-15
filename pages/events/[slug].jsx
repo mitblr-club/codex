@@ -1,6 +1,5 @@
-import "react-notion/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
-import { NotionRenderer } from "react-notion";
+import { NotionRenderer } from "@/components/NotionRenderer";
 import { getAllPosts } from './'
 
 export async function getStaticProps({ params: { slug } }) {

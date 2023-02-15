@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  background-color: theme(colors.gray.900);
+  background-color: theme(colors.gray.50);
 }
 
 * {
