@@ -12,7 +12,7 @@ export default function Navigation() {
 
 	return (
 		<>
-			<nav className="flex items-center flex-wrap bg-purple-600 p-2">
+			<nav className="fixed top-0 left-0 right-0 flex items-center flex-wrap p-2 bg-purple-600 bg-opacity-75 border-gray-500 shadow-lg backdrop-filter backdrop-blur-md">
 				<Link href="/" aria-label={siteConfig.headerTitle} className="inline-flex items-center p-1 px-3 mr-4 transition duration-150 hover:opacity-70">
 					<svg version="1.0" width="48" height="48" viewBox="0 0 900 900" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg">
 						<title>CodeX Logo</title>
@@ -23,7 +23,7 @@ export default function Navigation() {
 					</svg>
 				</Link>
 				<button 
-					className="inline-flex p-3 hover:bg-purple-400 rounded lg:hidden text-white ml-auto hover:text-white outline-none"
+					className="inline-flex p-3 transition duration-150 hover:bg-purple-400 rounded lg:hidden text-white ml-auto hover:text-white outline-none"
 					onClick={handleClick}
 				>
 				<svg
@@ -43,9 +43,9 @@ export default function Navigation() {
 				</button>
 				<div className={`${
             		active ? '' : 'hidden'
-          			}   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
+          			} w-full lg:inline-flex lg:flex-grow lg:w-auto`}
 				>
-					<div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
+					<div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
 						{siteConfig.navLinks.map((link) => (
 							<Link
 								key={link.title}

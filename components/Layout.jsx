@@ -13,7 +13,7 @@ export default function Layout({ children }) {
 	return (
 		<>
 			<Navigation />
-			<main>{children}</main>
+			<main className="pt-16">{children}</main>
 			<Footer />
 		</>
 	);
