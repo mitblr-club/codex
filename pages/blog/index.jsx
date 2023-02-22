@@ -1,15 +1,11 @@
-import siteConfig from "@/site.config";
 import Link from "next/link";
-import { formatDate } from "@/lib/formatDate";
 
-export async function getAllPosts() {
-	return await fetch(
-		`https://notion-api.splitbee.io/v1/table/${siteConfig.blogTableId}`
-	).then((res) => res.json());
-};
+import { formatDate } from "@/lib/formatDate";
+import { getAllPosts } from "@/lib/getAllPosts";
+import siteConfig from "@/site.config";
 
 export async function getStaticProps() {
-	const posts = await getAllPosts()
+	const posts = await getAllPosts(siteConfig.blogTableId)
 
 	return {
 		props: {

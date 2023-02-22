@@ -1,5 +1,6 @@
-import siteConfig from "@/site.config";
 import Link from "next/link";
+
+import siteConfig from "@/site.config";
 
 export default function Footer() {
 	return (

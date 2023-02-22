@@ -1,7 +1,7 @@
-import siteConfig from "@/site.config";
-
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
+
+import siteConfig from "@/site.config";
 
 export default function Navigation() {
 	const [active, setActive] = useState(false);
