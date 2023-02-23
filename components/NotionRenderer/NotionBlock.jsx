@@ -5,6 +5,7 @@ import Asset from "./NotionAsset";
 import Code from "./NotionCode";
 import PageIcon from "./NotionPageIcon";
 import { classNames } from "@/lib/classNames";
+import { getListNumber } from "@/lib/getListNumber";
 
 export const createRenderChildText = (
 	customDecoratorComponents
