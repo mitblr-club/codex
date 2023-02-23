@@ -1,11 +1,12 @@
+import { useRouter } from "next/router";
 import { NotionRenderer } from "@/components/NotionRenderer";
+import LoadingPage from "@/components/LoadingPage";
 import { getAllPosts } from "./";
 import { formatDate } from "@/lib/formatDate";
-import siteConfig from "@/site.config";
 import "prismjs/themes/prism-tomorrow.css";
 
 export async function getStaticProps({ params: { slug } }) {
-	const posts = await getAllPosts(siteConfig.blogTableId);
+	const posts = await getAllPosts();
 	const post = posts.find((t) => t.slug === slug);
 	const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${post.id}`).then((res) => res.json()); 
 	return {
@@ -26,7 +27,13 @@ export async function getStaticPaths() {
 }
 
 export default function BlogPost({ blocks, post }) {
-	return(
+	const router = useRouter()
+
+	if (router.isFallback) {
+		return <LoadingPage />
+	}
+
+	return (
 		<div>
 			<h1 className="notion notion-title">{post.title}</h1>
 			<p className="notion">{formatDate(post.date)}</p>
