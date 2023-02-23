@@ -1,4 +1,4 @@
-export default function LoadingIcon(props) {
+export default function LoadingPage(props) {
   const { className, ...rest } = props
   return (
 	<div className="absolute flex justify-center items-center p-2vmin">
