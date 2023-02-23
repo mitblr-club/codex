@@ -1,5 +1,5 @@
 import { NotionRenderer } from "@/components/NotionRenderer";
-import { getAllPosts } from "@/lib/getAllPosts";
+import { getAllPosts } from "./";
 import { formatDate } from "@/lib/formatDate";
 import siteConfig from "@/site.config";
 import "prismjs/themes/prism-tomorrow.css";
@@ -13,6 +13,7 @@ export async function getStaticProps({ params: { slug } }) {
 			blocks,
 			post,
 		},
+		revalidate: 60,
 	};
 }
 

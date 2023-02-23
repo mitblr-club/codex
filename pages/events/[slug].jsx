@@ -1,9 +1,9 @@
 import { NotionRenderer } from "@/components/NotionRenderer";
-import siteConfig from "@/site.config";
+import { getAllPosts } from "./";
 import "prismjs/themes/prism-tomorrow.css";
 
 export async function getStaticProps({ params: { slug } }) {
-  const posts = await getAllPosts(siteConfig.eventsTableId);
+  const posts = await getAllPosts();
   const post = posts.find((t) => t.slug === slug);
   const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${post.id}`).then((res) => res.json()); 
   return {
@@ -11,6 +11,7 @@ export async function getStaticProps({ params: { slug } }) {
      blocks,
      post,
     },
+    revalidate: 60,
   };
 }
 

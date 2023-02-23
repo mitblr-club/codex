@@ -1,11 +1,16 @@
 import Link from "next/link";
 
 import { formatDate } from "@/lib/formatDate";
-import { getAllPosts } from "@/lib/getAllPosts";
 import siteConfig from "@/site.config";
 
+export async function getAllPosts() {
+	return await fetch(
+		`https://notion-api.splitbee.io/v1/table/${siteConfig.eventsTableId}`
+	).then((res) => res.json());
+};
+
 export async function getStaticProps() {
-	const posts = await getAllPosts(siteConfig.eventsTableId)
+	const posts = await getAllPosts()
 
 	return {
 		props: {
