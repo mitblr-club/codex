@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { NotionRenderer } from "@/components/NotionRenderer";
-import LoadingPage from "@/components/LoadingPage";
 import { getAllPosts } from "./";
 import { formatDate } from "@/lib/formatDate";
 import "prismjs/themes/prism-tomorrow.css";
@@ -27,12 +26,6 @@ export async function getStaticPaths() {
 }
 
 export default function BlogPost({ blocks, post }) {
-	const router = useRouter()
-
-	if (router.isFallback) {
-		return <LoadingPage />
-	}
-
 	return (
 		<div>
 			<h1 className="notion notion-title">{post.title}</h1>

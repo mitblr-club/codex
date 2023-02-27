@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import LoadingPage from "@/components/LoadingPage";
 import { formatDate } from "@/lib/formatDate";
 import siteConfig from "@/site.config";
 
@@ -24,12 +23,6 @@ export async function getStaticProps() {
 }
 
 export default function BlogHome({ posts }) {
-	const router = useRouter()
-
-	if (router.isFallback) {
-		return <LoadingPage />
-	}
-
 	return (
 		<>
 			<h1 className="notion notion-title">CodeX Blog</h1>
