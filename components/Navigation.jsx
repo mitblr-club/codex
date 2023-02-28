@@ -12,7 +12,7 @@ export default function Navigation() {
 
 	return (
 		<>
-			<nav className="fixed top-0 left-0 right-0 flex items-center flex-wrap p-2 bg-purple-600 bg-opacity-75 border-gray-500 shadow-lg backdrop-filter backdrop-blur-md">
+			<nav className="fixed top-0 left-0 right-0 z-10 flex items-center flex-wrap p-2 bg-purple-600 bg-opacity-75 border-gray-500 shadow-lg backdrop-filter backdrop-blur-md">
 				<Link href="/" aria-label={siteConfig.headerTitle} className="inline-flex items-center p-1 px-3 mr-4 transition duration-150 hover:opacity-70">
 					<svg version="1.0" width="48" height="48" viewBox="0 0 900 900" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg">
 						<title>CodeX Logo</title>

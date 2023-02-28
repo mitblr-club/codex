@@ -6,7 +6,7 @@ module.exports = {
       "www.notion.so",
       "notion.so",
       "images.unsplash.com",
-      "s3.us-west-2.amazonaws.com",
+      "s3-us-west-2.amazonaws.com",
       "lh3.googleusercontent.com",
     ],
     formats: ["image/avif", "image/webp"],
