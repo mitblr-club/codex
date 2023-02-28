@@ -1,7 +1,12 @@
-import { useRouter } from "next/router";
 import { NotionRenderer } from "@/components/NotionRenderer";
-import { getAllPosts } from "./";
+import siteConfig from "@/site.config";
 import "prismjs/themes/prism-tomorrow.css";
+
+export async function getAllPosts() {
+	return await fetch(
+		`https://notion-api.splitbee.io/v1/table/${siteConfig.eventsTableId}`
+	).then((res) => res.json());
+};
 
 export async function getStaticProps({ params: { slug } }) {
 	const posts = await getAllPosts();
@@ -25,6 +30,9 @@ export async function getStaticPaths() {
 }
 
 export default function EventPost({ blocks, post }) {	
+
+	if (!post) return null;
+
 	return(
 		<div>
 			<h1 className="notion notion-title">{post.title}</h1>
