@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
+import authors from "@/data/authors";
 import { formatDate } from "@/lib/formatDate";
 import siteConfig from "@/site.config";
 
@@ -29,6 +29,8 @@ export default function BlogHome({ posts }) {
 			<div className="notion grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
 				{posts.filter((post) => {
 					return (post.published ? post : null)
+				}).reverse((post) => {
+					return (formatDate(post.date))
 				}).map((post) => (
 					<article key={post.title}>
 						<Link 
@@ -42,6 +44,9 @@ export default function BlogHome({ posts }) {
 									<div className="font-bold text-xl mb-2">
 										{post.title}
 									</div>
+									<div className="py-2 text-sm">
+										<p className="text-gray-600">{formatDate(post.date)}</p>
+									</div>
 									{post.description ? (
 										<p className="text-gray-700 text-base">{post.description}</p>
 									) : null}
@@ -51,16 +56,17 @@ export default function BlogHome({ posts }) {
 										<span key={tag} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span>
 									)) : null}
 								{post.authors.map((author) => (
-									<div key={author.fullName} className="flex items-center py-3">
+									<div key={authors[author.id].fullName} className="flex items-center py-3">
 										<Image 
+											alt={authors[author.id].firstName} 
 											className="rounded-full mr-4" 
-											src={author.profilePhoto} 
+											src={authors[author.id].profilePhoto} 
 											width={40}
 											height={40}
-											alt={author.firstName} />
+										/>
 										<div className="text-sm">
-											<p className="text-gray-900 leading-none">{author.fullName}</p>
-											<p className="text-gray-600">{formatDate(post.date)}</p>
+											<p className="text-gray-900 leading-none">{authors[author.id].fullName}</p>
+											<p className="pt-1 text-gray-500 leading-none">{authors[author.id].department.name}</p>
 										</div>
 									</div>
 								))}
