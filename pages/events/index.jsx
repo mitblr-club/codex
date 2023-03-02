@@ -33,7 +33,7 @@ export default function EventsHome({ posts }) {
 	return (
 		<>
 			<h1 className="notion notion-title">Live Events</h1>
-			<div className="notion">
+			<div className="notion grid grid-cols-1 gap-5">
 				{liveEvents.map((event) => (
 					<article 
 						key={event.title}
@@ -46,26 +46,32 @@ export default function EventsHome({ posts }) {
 							className="group relative block rounded-lg bg-gray-900"
 							passHref
 						>
+							<div className="relative z-10 px-6 pt-8">
+									{event.tags ? event.tags.map((tag) => (
+										<span key={tag} className="bg-gray-100 rounded-lg px-3 py-1.5 text-sm font-semibold text-gray-800 ml-1 mr-2 mb-2">{tag}</span>
+									)) : null}
+							</div>
 							<div style={{ width: "100%", height: 100 }}>
 								<Image
-									className="relative overflow-hidden rounded-lg transition-opacity group-hover:opacity-75"
+									className="relative rounded-lg overflow-hidden transition-opacity group-hover:opacity-75"
 									alt={event.title}
 									src={event.background[0].url}
 									style={{ objectFit: "cover" }}
 									fill
 								/>
 							</div>
-							<div class="relative p-4 sm:p-6 lg:p-8">
-								<p class="text-sm font-medium uppercase tracking-widest text-white">
+							
+							<div className="relative p-4 sm:p-6 lg:p-8">
+								<p className="text-sm font-medium uppercase tracking-widest text-white">
 								{formatDate(event.date)}
 								</p>
-								<p class="text-xl font-bold text-white sm:text-2xl">{event.title}</p>
+								<p className="text-xl font-bold text-white sm:text-2xl">{event.title}</p>
 							</div>
 						</Link>
 					</article>
 				))}
 			</div>
-			<h1 className="notion notion-title">All Events</h1>
+			<h1 className="notion notion-title">Previous Events</h1>
 			<div className="notion grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
 				{posts.filter((event) => {
 					return (event.joinable ? null : event)
@@ -91,7 +97,7 @@ export default function EventsHome({ posts }) {
 										<p className="text-gray-700 text-base">{event.registration}</p>
 									) : null}
 								</div>
-								<div className="px-6 py-4">
+								<div className="px-5 py-5">
 									{event.tags ? event.tags.map((tag) => (
 										<span key={tag} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span>
 									)) : null}
