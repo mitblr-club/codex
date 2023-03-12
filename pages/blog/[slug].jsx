@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { NotionRenderer } from "@/components/NotionRenderer";
 import { formatDate } from "@/lib/formatDate";
 import siteConfig from "@/site.config";
@@ -35,10 +37,21 @@ export default function BlogPost({ blocks, post }) {
 	if (!post) return null;
 
 	return (
-		<div>
+		<>
+			<Head>
+				<title>{`${post.title} | ${siteConfig.headerTitle} Blog`}</title>
+				<meta name="og:title" content={`${post.title} | ${siteConfig.headerTitle} Blog`} />
+				<meta name="og:description" content={siteConfig.description} />
+				<meta name="article:published_time" content={post.date} />
+				{post.tags?.map((tag) => (
+					<meta key={tag} name="article:tag" content={tag} />
+				))}
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 			<h1 className="notion notion-title">{post.title}</h1>
 			<p className="notion">{formatDate(post.date)}</p>
 			<NotionRenderer blockMap={blocks} />
-		</div>
+		</>
 	)
 };

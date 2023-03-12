@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -32,6 +33,12 @@ export default function EventsHome({ posts }) {
 
 	return (
 		<>
+			<Head>
+				<title>{`Events | ${siteConfig.headerTitle}`}</title>
+				<meta name="description" content={`Register for the latest events by ${siteConfig.title}!`} />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 			<h1 className="notion notion-title">Live Events</h1>
 			<div className="notion grid grid-cols-1 gap-5">
 				{liveEvents.map((event) => (

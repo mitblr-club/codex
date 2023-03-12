@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,6 +26,12 @@ export async function getStaticProps() {
 export default function BlogHome({ posts }) {
 	return (
 		<>
+			<Head>
+				<title>{`Blog | ${siteConfig.headerTitle}`}</title>
+				<meta name="description" content={`Register for the latest articles by the members of ${siteConfig.title}!`} />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>	
 			<h1 className="notion notion-title">CodeX Blog</h1>
 			<div className="notion grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
 				{posts.filter((post) => {
@@ -52,9 +59,9 @@ export default function BlogHome({ posts }) {
 									) : null}
 								</div>
 								<div className="px-6 py-2">
-									{post.tags ? post.tags.map((tag) => (
+									{post.tags?.map((tag) => (
 										<span key={tag} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span>
-									)) : null}
+									))}
 								{post.authors.map((author) => (
 									<div key={authors[author.id].fullName} className="flex items-center py-3">
 										<Image 
