@@ -47,8 +47,7 @@ export default function EventsHome({ posts }) {
 						className="shadow-xl transition duration-150 hover:shadow-2xl"
 					>
 						<Link
-							href="/events/[slug]"
-							as={`/events/${event.slug}`} 
+							href={event.registration}
 							key={event.title}
 							className="group relative block rounded-lg bg-gray-900"
 							passHref
@@ -67,7 +66,6 @@ export default function EventsHome({ posts }) {
 									fill
 								/>
 							</div>
-							
 							<div className="relative p-4 sm:p-6 lg:p-8">
 								<p className="text-sm font-medium uppercase tracking-widest text-white">
 								{formatDate(event.date)}
