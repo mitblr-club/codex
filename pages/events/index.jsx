@@ -79,7 +79,7 @@ export default function EventsHome({ posts }) {
 			<h1 className="notion notion-title">Previous Events</h1>
 			<div className="notion grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
 				{posts.filter((event) => {
-					return (event.joinable ? null : event)
+					return (event.joinable ? null : (event.published ? event : null))
 				}).reverse((event) => {
 					return (formatDate(event.date))
 				}).map((event) => (
