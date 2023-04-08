@@ -12,6 +12,7 @@ const siteConfig = {
 	navLinks: [
 		{ href: "/events", title: "Events" },
 		{ href: "/blog", title: "Blog" },
+		{ href: "/team", title: "About Us" },
 	],
 
 	github: "https://github.com/",
