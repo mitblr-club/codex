@@ -41,11 +41,9 @@ export default function Home() {
 				<div className="flex flex-col items-center justify-center">
 					<h1 className="text-5xl font-bold font-mono">OUR VISION</h1>
 					<p className="p-6 text-lg text-center">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					We strive to provide the best resources and tech education to the students at MAHE-BLR, irrespective of their experience or domain knowledge.
 					<br />
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-					<br /> 
-					cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					CodeX welcomes students from all disciplines, across the colleges at MAHE-BLR
 					</p>
 				</div>
         	</div>
