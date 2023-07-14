@@ -24,7 +24,7 @@ module.exports = {
 		description: "This is the description of competitive programming.",
 		shorthand: "CXIT"
 	},
-	"cxsmm": {
+	"cxm": {
 		name: "Marketing",
 		description: "This is the description of competitive programming.",
 		shorthand: "CXSMM"
