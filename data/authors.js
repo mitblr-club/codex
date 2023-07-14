@@ -10,7 +10,7 @@ module.exports = {
 	},
 	"0a78f39d-eb87-4653-b2a2-872f13be5cba": {
 	  fullName: "Nakul Kamath",
-	  department: departments.cxm,
+	  department: departments.cxsmm,
 	  profilePhoto: "https://lh3.googleusercontent.com/a/AEdFTp6nEaBgNPWls1Ln8ClJg5nFqHWkAJ9t2hArvvE-2Q=s100"
 	},
 	"0d42484b-296a-46d4-94d8-d760f77ae7b8": {
@@ -31,7 +31,7 @@ module.exports = {
 	},
 	"3df21d65-c8b5-4bba-8b3b-632be070c647": {
 	  fullName: "Vaishnavi D",
-	  department: departments.cxm,
+	  department: departments.cxsmm,
 	  profilePhoto: "https://s3-us-west-2.amazonaws.com/public.notion-static.com/061bbe1d-1847-4a51-a39b-164aebd74538/B612_20230214_212218_301.jpg"
 	},
 	"46ef6cad-ce53-43b4-8470-b044755d043d": {
