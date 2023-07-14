@@ -25,7 +25,7 @@ module.exports = {
 		shorthand: "CXIT"
 	},
 	"cxsmm": {
-		name: "Social Media Management",
+		name: "Marketing",
 		description: "This is the description of competitive programming.",
 		shorthand: "CXSMM"
 	}
