@@ -6,7 +6,7 @@ module.exports = {
 	},
 	"cxcp": {
 		name: "Competitive Programming",
-		description: "This is the description of competitive programming.",
+		description: "From contests, to CP-101, we do everything competitive programming.",
 		shorthand: "CXCP"
 	},
 	"cxos": {
@@ -16,17 +16,17 @@ module.exports = {
 	},
 	"cxgd": {
 		name: "Game Development",
-		description: "explores all aspects of game devevelopment; be it programming, 3D modelling or sound design.",
+		description: "Explores all aspects of game development; be it programming, 3D modelling or sound design.",
 		shorthand: "CXGD"
 	},
 	"cxit": {
 		name: "Information Technology",
-		description: "This is the description of competitive programming.",
+		description: "Explores aspects such as networking, The cloud, and Info-Tech.",
 		shorthand: "CXIT"
 	},
 	"cxm": {
 		name: "Marketing",
 		description: "This is the description of competitive programming.",
-		shorthand: "CXSMM"
+		shorthand: "CXM"
 	}
 }
