@@ -24,9 +24,9 @@ module.exports = {
 		description: "Explores aspects such as networking, The cloud, and Info-Tech.",
 		shorthand: "CXIT"
 	},
-	"cxm": {
+	"cxsmm": {
 		name: "Marketing",
 		description: "This is the description of competitive programming.",
-		shorthand: "CXM"
+		shorthand: "CXSMM"
 	}
 }
