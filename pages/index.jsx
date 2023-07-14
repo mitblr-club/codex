@@ -44,6 +44,7 @@ export default function Home() {
 					We strive to provide the best resources and tech education to the students at MAHE-BLR, irrespective of their experience or domain knowledge.
 					<br />
 					CodeX welcomes students from all disciplines, across the colleges at MAHE-BLR
+					</p>
 				</div>
         	</div>
 			<div className="relative w-full p-20 h-80">
