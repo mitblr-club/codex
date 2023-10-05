@@ -6,7 +6,7 @@ import siteConfig from "@/site.config";
 export default function Register() {
 	const router = useRouter();
 	useEffect(() => {
-		router.replace("https://forms.office.com/r/ugiEExigqe");
+		router.replace("https://forms.office.com/r/vUvDVQXcXB");
 	});
 
 	return (
