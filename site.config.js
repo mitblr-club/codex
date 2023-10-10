@@ -1,7 +1,8 @@
 const siteConfig = {
 	title: "CodeX MIT-BLR",
 	headerTitle: "CodeX",
-	description: "The website for CodeX, a club by the students of MIT Bengaluru.",
+	description:
+		"The website for CodeX, a club by the students of MIT Bengaluru.",
 	language: "en-us",
 
 	siteUrl: "https://codex.mitblr.club/",
@@ -15,8 +16,19 @@ const siteConfig = {
 		{ href: "/team", title: "About Us" },
 	],
 
+	redirects: [
+		{
+			path: "/register",
+			href: "https://codex.mitb.club/events",
+		},
+		{
+			path: "/internal/sharepoint",
+			href: "https://learnermanipal.sharepoint.com/sites/CodeX/Shared%20Documents/Forms/AllItems.aspx",
+		},
+	],
+
 	github: "https://github.com/",
 	twitter: "https://twitter.com/CodeX_MITB",
-}
+};
 
-module.exports = siteConfig
+module.exports = siteConfig;
