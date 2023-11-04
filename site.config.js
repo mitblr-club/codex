@@ -18,6 +18,10 @@ const siteConfig = {
 
 	redirects: [
 		{
+			path: "/projects",
+			href: "https://forms.office.com/r/TSXdG9FuvA",
+		},
+		{
 			path: "/register",
 			href: "https://codex.mitb.club/events",
 		},
