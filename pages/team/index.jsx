@@ -5,7 +5,7 @@ import siteConfig from "@/site.config";
 import "prismjs/themes/prism-tomorrow.css";
 
 export async function getStaticProps() {
-	const blocks = await fetch("https://notion-api.splitbee.io/v1/page/bc455f5137d04b8b8646b26fa86810c6").then((res) => res.json()); 
+	const blocks = await fetch("https://notion-api.splitbee.io/v1/page/3200c7b1776f41bebfe6e5f49698309f").then((res) => res.json()); 
 	return {
 		props: {
 			blocks,
