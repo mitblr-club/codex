@@ -23,7 +23,7 @@ const siteConfig = {
 		},
 		{
 			path: "/register",
-			href: "https://codex.mitb.club/events",
+			href: "https://forms.office.com/r/nN64QXr86h",
 		},
 		{
 			path: "/internal/sharepoint",
