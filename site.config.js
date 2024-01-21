@@ -7,8 +7,8 @@ const siteConfig = {
 
 	siteUrl: "https://codex.mitblr.club/",
 	siteLogo: "/public/logo.png",
-	eventsTableId: "df0bbd9604a846468e6aaf7f41042c1c",
-	blogTableId: "4388cd358b214e539f9c5ea5f941ad4e",
+	eventsTableId: "bce097af99dc4179983660dbafb479fc",
+	blogTableId: "bc59e12441b14107880e8e479d89ea50",
 
 	navLinks: [
 		{ href: "/events", title: "Events" },
@@ -23,6 +23,10 @@ const siteConfig = {
 		},
 		{
 			path: "/register",
+			href: "https://forms.office.com/r/nN64QXr86h",
+		},
+		{
+			path: "/register!",
 			href: "https://forms.office.com/r/nN64QXr86h",
 		},
 		{
