@@ -18,10 +18,6 @@ const siteConfig = {
 
 	redirects: [
 		{
-			path: "/projects",
-			href: "https://forms.office.com/r/TSXdG9FuvA",
-		},
-		{
 			path: "/register",
 			href: "https://forms.office.com/r/nN64QXr86h",
 		},
@@ -30,8 +26,16 @@ const siteConfig = {
 			href: "https://forms.office.com/r/nN64QXr86h",
 		},
 		{
+			path: "/git-and-hub",
+			href: "https://github.com/codex-mitblr/git-and-hub",
+		},
+		{
 			path: "/internal/sharepoint",
 			href: "https://learnermanipal.sharepoint.com/sites/CodeX/Shared%20Documents/Forms/AllItems.aspx",
+		},
+		{
+			path: "/internal/media",
+			href: "https://abhigyantrips.notion.site/Photography-Portfolio-5d1de1eb16f34d00b018deec2c674da3?pvs=4",
 		},
 	],
 
