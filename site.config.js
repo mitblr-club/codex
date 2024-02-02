@@ -26,6 +26,10 @@ const siteConfig = {
 			href: "https://forms.office.com/r/nN64QXr86h",
 		},
 		{
+			path: "/discord",
+			href: "https://discord.gg/sUvBqKczX6",
+		},
+		{
 			path: "/git-and-hub",
 			href: "https://github.com/codex-mitblr/git-and-hub",
 		},
