@@ -19,11 +19,11 @@ const siteConfig = {
 	redirects: [
 		{
 			path: "/register",
-			href: "https://forms.office.com/r/nN64QXr86h",
+			href: "https://codex.mitblr.club/events",
 		},
 		{
-			path: "/register!",
-			href: "https://forms.office.com/r/nN64QXr86h",
+			path: "/projects",
+			href: "https://forms.office.com/r/u3dEnfqydA",
 		},
 		{
 			path: "/discord",
