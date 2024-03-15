@@ -26,6 +26,10 @@ const siteConfig = {
 			href: "https://forms.office.com/r/u3dEnfqydA",
 		},
 		{
+			path: "/institute",
+			href: "https://www.manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mitblr/mit-experience/student-clubs-overview/technical-clubs/codex.html",
+		},
+		{
 			path: "/discord",
 			href: "https://discord.gg/sUvBqKczX6",
 		},
