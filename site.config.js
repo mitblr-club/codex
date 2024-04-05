@@ -38,6 +38,10 @@ const siteConfig = {
 			href: "https://github.com/codex-mitblr/git-and-hub",
 		},
 		{
+			path: "/hackerrank",
+			href: "https://www.hackerrank.com/codex-techfest-nexus",
+		},
+		{
 			path: "/internal/sharepoint",
 			href: "https://learnermanipal.sharepoint.com/sites/CodeX/Shared%20Documents/Forms/AllItems.aspx",
 		},
