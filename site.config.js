@@ -51,8 +51,8 @@ const siteConfig = {
 		},
 	],
 
-	github: "https://github.com/",
-	twitter: "https://twitter.com/CodeX_MITB",
+	github: "https://github.com/codex-mitblr	",
+	twitter: "https://twitter.com/",
 };
 
 module.exports = siteConfig;
