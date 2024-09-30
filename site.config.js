@@ -51,8 +51,10 @@ const siteConfig = {
 		},
 	],
 
+	instagram:"https://instagram.com/codex.mitblr",
 	github: "https://github.com/codex-mitblr	",
 	twitter: "https://twitter.com/",
+	linkedin: "https://www.linkedin.com/company/codex-mitblr/"
 };
 
 module.exports = siteConfig;
